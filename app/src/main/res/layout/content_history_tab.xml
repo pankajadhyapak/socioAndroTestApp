@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.samkhyatech.testapplication.HistoryTab"
+    tools:showIn="@layout/activity_history_tab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="#ffffffff">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Past History"
+            android:id="@+id/pastHistory"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History of similar complaints"
+            android:id="@+id/historyofsimilarcomplaints"
+            android:layout_below="@+id/pastHistory"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="22dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioHistoryofsimilarcomplaints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/historyofsimilarcomplaints"
+            android:layout_toRightOf="@+id/sex">
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:id="@+id/historyofsimilarcomplaintsYesRadioBtn"
+                android:checked="false"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:id="@+id/historyofsimilarcomplaintsNoRadioBtn"
+                android:checked="false" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hypertension"
+            android:id="@+id/Hypertension"
+            android:layout_below="@+id/radioHistoryofsimilarcomplaints"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="22dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioHypertension"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/Hypertension"
+            android:layout_toRightOf="@+id/sex">
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:id="@+id/HypertensionYesRadioBtn"
+                android:checked="false"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:id="@+id/HypertensionNoRadioBtn"
+                android:checked="false" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diabetes"
+            android:id="@+id/Diabetes"
+            android:layout_below="@+id/radioHypertension"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="22dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioDiabetes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/Diabetes"
+            android:layout_toRightOf="@+id/sex">
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:id="@+id/DiabetesYesRadioBtn"
+                android:checked="false"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:id="@+id/DiabetesNoRadioBtn"
+                android:checked="false" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any surgeries conducted"
+            android:id="@+id/Anysurgeriesconducted"
+            android:layout_below="@+id/radioDiabetes"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="22dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioAnysurgeriesconducted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/Anysurgeriesconducted"
+            android:layout_toRightOf="@+id/sex">
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/AnysurgeriesconductedYesRadioBtn"
+                android:checked="false"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:onClick="onRadioButtonClicked"
+                android:id="@+id/AnysurgeriesconductedNoRadioBtn"
+                android:checked="false" />
+
+        </RadioGroup>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/AnysurgeriesconductedEditText"
+            android:layout_below="@+id/radioAnysurgeriesconducted"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="Surgeries Conducted"
+            android:minLines="2"
+            android:visibility="gone"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/DrugHistory"
+            android:layout_below="@+id/AnysurgeriesconductedEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="Drug History"
+            android:minLines="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal History"
+            android:id="@+id/personalHistory"
+            android:layout_below="@id/DrugHistory"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smoking ?"
+            android:id="@+id/Smoking"
+            android:layout_below="@id/personalHistory" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drinking ?"
+            android:id="@+id/Drinking"
+            android:layout_below="@id/Smoking" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bowel behavior ?"
+            android:id="@+id/Bowelbehavior"
+            android:layout_below="@id/Drinking" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appetite ?"
+            android:id="@+id/appetite"
+            android:layout_below="@id/Bowelbehavior" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sleep ?"
+            android:id="@+id/sleep"
+            android:layout_below="@id/appetite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Family History"
+            android:id="@+id/familyHistory"
+            android:layout_below="@id/sleep"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/familyHistoryEditText"
+            android:layout_below="@+id/familyHistory"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="Drug History"
+            android:minLines="2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete"
+            android:id="@+id/saveBtn"
+            android:layout_below="@+id/familyHistoryEditText"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
+
+
