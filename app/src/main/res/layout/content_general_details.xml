@@ -5,8 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.samkhyatech.testapplication.MainActivity"
-    tools:showIn="@layout/activity_main"
+    tools:context=".GeneralDetails"
+    tools:showIn="@layout/activity_general_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -18,6 +18,13 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:background="#ffffffff">
+
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
 
 
         <EditText
@@ -212,6 +219,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Complete"
+            android:onClick="onCompleteBtn"
             android:id="@+id/saveBtn"
             android:layout_below="@+id/Nourishment"
             android:layout_centerHorizontal="true" />

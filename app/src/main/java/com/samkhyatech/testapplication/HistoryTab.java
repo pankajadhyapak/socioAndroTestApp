@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class HistoryTab extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class HistoryTab extends AppCompatActivity {
         setContentView(R.layout.activity_history_tab);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
@@ -35,6 +37,10 @@ public class HistoryTab extends AppCompatActivity {
                     findViewById(R.id.AnysurgeriesconductedEditText).setVisibility(View.GONE);
                     break;
         }
+    }
+    public void onCompleteBtn(View view){
+        Toast.makeText(this, "Saving Data", Toast.LENGTH_SHORT).show();
+        finish();
     }
 
 }

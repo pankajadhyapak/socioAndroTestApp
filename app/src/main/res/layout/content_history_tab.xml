@@ -20,6 +20,12 @@
         android:background="#ffffffff">
 
 
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -226,32 +232,45 @@
             android:text="Drinking ?"
             android:id="@+id/Drinking"
             android:layout_below="@id/Smoking" />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bowel behavior ?"
-            android:id="@+id/Bowelbehavior"
-            android:layout_below="@id/Drinking" />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Appetite ?"
-            android:id="@+id/appetite"
-            android:layout_below="@id/Bowelbehavior" />
 
-        <CheckBox
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="sleep ?"
+            android:inputType="textMultiLine"
+            android:ems="10"
             android:id="@+id/sleep"
-            android:layout_below="@id/appetite" />
+            android:layout_below="@+id/Drinking"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="Sleep"
+            android:minLines="2" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/Appetite"
+            android:layout_below="@+id/sleep"
+            android:hint="Appetite"
+            android:minLines="2" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/BowelBehaviour"
+            android:layout_below="@+id/Appetite"
+            android:hint="Bowel Behaviour"
+            android:minLines="2" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Family History"
             android:id="@+id/familyHistory"
-            android:layout_below="@id/sleep"
+            android:layout_below="@id/BowelBehaviour"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:textSize="20dp"
@@ -274,6 +293,7 @@
             android:layout_height="wrap_content"
             android:text="Complete"
             android:id="@+id/saveBtn"
+            android:onClick="onCompleteBtn"
             android:layout_below="@+id/familyHistoryEditText"
             android:layout_centerHorizontal="true" />
 
