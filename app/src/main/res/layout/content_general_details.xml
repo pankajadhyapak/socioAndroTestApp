@@ -215,13 +215,25 @@
             android:hint="Nourishment"
             android:minLines="2" />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/eyes"
+            android:layout_below="@+id/Nourishment"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="Eyes"
+            android:minLines="2" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Complete"
             android:onClick="onCompleteBtn"
             android:id="@+id/saveBtn"
-            android:layout_below="@+id/Nourishment"
+            android:layout_below="@+id/eyes"
             android:layout_centerHorizontal="true" />
 
 

@@ -108,35 +108,39 @@
 
         </RadioGroup>
 
-        <EditText
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:ems="10"
-            android:id="@+id/PrescriptionEditText"
+            android:layout_height="match_parent"
+            android:id="@+id/PrescriptionContainer"
             android:layout_below="@+id/radioPrescription"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:hint="Prescription"
-            android:minLines="2"
-            android:visibility="gone"/>
+            >
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:ems="10"
-            android:id="@+id/PrescriptionPicBtn"
-            android:onClick="selectPrescriptionImages"
-            android:layout_below="@+id/radioPrescription"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:hint="Add Images"
-            android:minLines="2"
-            android:visibility="gone"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/PrescriptionEditText"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="Prescription"
+                android:minLines="2"
+                android:visibility="gone"/>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/PrescriptionPicBtn"
+                android:onClick="selectPrescriptionImages"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="Add Images"
+                android:minLines="2"
+                android:visibility="gone"/>
 
-
+        </RelativeLayout>
 
         <Button
             android:layout_width="wrap_content"
@@ -144,7 +148,7 @@
             android:text="Complete"
             android:id="@+id/saveBtn"
             android:onClick="onCompleteBtn"
-            android:layout_below="@+id/PrescriptionPicBtn"
+            android:layout_below="@+id/PrescriptionContainer"
             android:layout_centerHorizontal="true" />
 
 

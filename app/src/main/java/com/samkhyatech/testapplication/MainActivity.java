@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.Medication:
                 startActivity(new Intent(MainActivity.this, Medication.class));
                 break;
+            case R.id.Reports:
+                startActivity(new Intent(MainActivity.this, Reports.class));
+                break;
+            case R.id.ImageUploadTest:
+                startActivity(new Intent(MainActivity.this, MyImagePicker.class));
         }
     }
 }

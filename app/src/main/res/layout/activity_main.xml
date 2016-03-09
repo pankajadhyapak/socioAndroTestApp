@@ -42,6 +42,20 @@
             android:text="Medication"
             android:onClick="onButtonClicked"
             android:id="@+id/Medication" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reports"
+            android:onClick="onButtonClicked"
+            android:id="@+id/Reports" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Image Upload test"
+            android:onClick="onButtonClicked"
+            android:id="@+id/ImageUploadTest" />
     </LinearLayout>
 
 

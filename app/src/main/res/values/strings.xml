@@ -5,4 +5,6 @@
     <string name="title_activity_history_tab">HistoryTab</string>
     <string name="title_activity_investigations">Investigations</string>
     <string name="title_activity_medication">Medication</string>
+    <string name="title_activity_reports">Reports</string>
+    <string name="title_activity_my_image_picker">MyImagePicker</string>
 </resources>

@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.samkhyatech.testapplication">
 
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +19,7 @@
         <activity
             android:name=".GeneralDetails"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.samkhyatech.testapplication.MainActivity" />
@@ -19,7 +27,7 @@
         <activity
             android:name=".HistoryTab"
             android:label="@string/title_activity_history_tab"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.samkhyatech.testapplication.MainActivity" />
@@ -27,7 +35,7 @@
         <activity
             android:name=".Investigations"
             android:label="@string/title_activity_investigations"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.samkhyatech.testapplication.MainActivity" />
@@ -35,7 +43,7 @@
         <activity
             android:name=".Medication"
             android:label="@string/title_activity_medication"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.samkhyatech.testapplication.MainActivity" />
@@ -47,7 +55,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.gun0912.tedpicker.ImagePickerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reports"
+            android:label="@string/title_activity_reports"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyImagePicker"
+            android:label="@string/title_activity_my_image_picker"
+            android:theme="@style/AppTheme">
 
+        </activity>
     </application>
 
 </manifest>
