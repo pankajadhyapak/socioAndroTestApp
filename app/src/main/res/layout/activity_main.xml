@@ -11,51 +11,63 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:background="#ffffff"
+
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Create New Case"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="General Details"
             android:onClick="onButtonClicked"
-            android:id="@+id/generalDetails" />
+            android:id="@+id/generalDetails"
+            android:background="#1fc055"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="10dp"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="History"
             android:onClick="onButtonClicked"
-            android:id="@+id/History" />
+            android:id="@+id/History"
+            android:background="#1fc055"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="10dp" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Investigation"
             android:onClick="onButtonClicked"
-            android:id="@+id/Investigation" />
+            android:id="@+id/Investigation"
+            android:background="#1fc055"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="10dp" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Medication"
             android:onClick="onButtonClicked"
-            android:id="@+id/Medication" />
+            android:id="@+id/Medication"
+            android:background="#1fc055"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="10dp" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Reports"
-            android:onClick="onButtonClicked"
-            android:id="@+id/Reports" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Image Upload test"
-            android:onClick="onButtonClicked"
-            android:id="@+id/ImageUploadTest" />
     </LinearLayout>
 
 

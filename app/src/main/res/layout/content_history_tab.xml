@@ -231,7 +231,24 @@
             android:layout_height="wrap_content"
             android:text="Drinking ?"
             android:id="@+id/Drinking"
+            android:layout_alignTop="@+id/Smoking"
+            android:layout_toRightOf="@+id/Smoking"
+            android:layout_toEndOf="@+id/Smoking" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chewing Tabacco ?"
+            android:id="@+id/chewingTabacco"
             android:layout_below="@id/Smoking" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sleeping Pills ?"
+            android:id="@+id/sleepingPills"
+            android:layout_alignTop="@+id/chewingTabacco"
+            android:layout_toRightOf="@+id/chewingTabacco"
+            android:layout_toEndOf="@+id/chewingTabacco" />
 
         <EditText
             android:layout_width="match_parent"
@@ -239,7 +256,7 @@
             android:inputType="textMultiLine"
             android:ems="10"
             android:id="@+id/sleep"
-            android:layout_below="@+id/Drinking"
+            android:layout_below="@+id/chewingTabacco"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:hint="Sleep"
@@ -289,13 +306,15 @@
             android:minLines="2" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Complete"
             android:id="@+id/saveBtn"
             android:onClick="onCompleteBtn"
             android:layout_below="@+id/familyHistoryEditText"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:background="#1fc055"
+            android:textColor="#ffffff"/>
 
 
     </RelativeLayout>

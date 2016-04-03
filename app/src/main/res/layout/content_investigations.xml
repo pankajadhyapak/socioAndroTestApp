@@ -43,8 +43,8 @@
 
             <TableRow
                 android:id="@+id/PulserateContainer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:padding="5dip">
 
                 <TextView
@@ -53,12 +53,10 @@
 
 
                <EditText
-                android:layout_width="match_parent"
+                android:layout_width="10sp"
                 android:layout_height="wrap_content"
                 android:inputType="number|numberDecimal"
-                android:ems="10"
                 android:id="@+id/PulserateeditText"
-                android:hint="Pulse Rate"
                 android:layout_marginLeft="10dp" />
                 <TextView
                     android:id="@+id/PulserateMeasuretextView"
@@ -82,7 +80,6 @@
                     android:inputType="number|numberDecimal"
                     android:ems="10"
                     android:id="@+id/TemperatureeditText"
-                    android:hint="Temperature"
 
                     android:layout_marginLeft="10dp"
                     />
@@ -107,7 +104,6 @@
                     android:inputType="number|numberDecimal"
                     android:ems="10"
                     android:id="@+id/BloodpressureeditText"
-                    android:hint="Blood Pressure"
                     android:layout_marginLeft="10dp"/>
 
                 <TextView
@@ -132,7 +128,6 @@
                     android:inputType="number|numberDecimal"
                     android:ems="10"
                     android:id="@+id/RespiratoryrateeditText"
-                    android:hint="Respiratory Rate"
                     android:layout_marginLeft="10dp"/>
                 <TextView
                     android:id="@+id/RespiratoryrateMeasuretextView"
@@ -171,14 +166,16 @@
 
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Complete"
             android:id="@+id/saveBtn"
             android:layout_below="@+id/DiagnosisConclusion"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:onClick="onCompleteBtn"/>
+            android:onClick="onCompleteBtn"
+            android:background="#1fc055"
+            android:textColor="#ffffff"/>
 
 
         <!--<RelativeLayout-->

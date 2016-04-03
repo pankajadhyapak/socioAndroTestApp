@@ -8,10 +8,10 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
-import com.bumptech.glide.Glide;
-import com.gun0912.tedpicker.Config;
-import com.gun0912.tedpicker.ImagePickerActivity;
+//
+//import com.bumptech.glide.Glide;
+//import com.gun0912.tedpicker.Config;
+//import com.gun0912.tedpicker.ImagePickerActivity;
 
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -45,7 +45,7 @@ public class MyImagePicker extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                getImages(new Config());
+                //getImages(new Config());
             }
         });
 
@@ -56,37 +56,37 @@ public class MyImagePicker extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                Config config = new Config();
-                config.setCameraHeight(R.dimen.app_camera_height);
-                config.setToolbarTitleRes(R.string.app_name);
-                config.setSelectionMin(2);
-                config.setSelectionLimit(4);
-                config.setSelectedBottomHeight(R.dimen.app_camera_height);
-                config.setFlashOn(true);
-
-
-                getImages(config);
+//                Config config = new Config();
+//                config.setCameraHeight(R.dimen.app_camera_height);
+//                config.setToolbarTitleRes(R.string.app_name);
+//                config.setSelectionMin(2);
+//                config.setSelectionLimit(4);
+//                config.setSelectedBottomHeight(R.dimen.app_camera_height);
+//                config.setFlashOn(true);
+//
+//
+//                getImages(config);
             }
         });
 
 
     }
 
-    private void getImages(Config config) {
-
-
-        ImagePickerActivity.setConfig(config);
-
-        Intent intent = new Intent(this, ImagePickerActivity.class);
-
-        if (image_uris != null) {
-            intent.putParcelableArrayListExtra(ImagePickerActivity.EXTRA_IMAGE_URIS, image_uris);
-        }
-
-
-        startActivityForResult(intent, INTENT_REQUEST_GET_IMAGES);
-
-    }
+//    private void getImages(Config config) {
+//
+//
+//        ImagePickerActivity.setConfig(config);
+//
+//        Intent intent = new Intent(this, ImagePickerActivity.class);
+//
+//        if (image_uris != null) {
+//            intent.putParcelableArrayListExtra(ImagePickerActivity.EXTRA_IMAGE_URIS, image_uris);
+//        }
+//
+//
+//        startActivityForResult(intent, INTENT_REQUEST_GET_IMAGES);
+//
+//    }
 
 
     @Override
@@ -97,11 +97,11 @@ public class MyImagePicker extends AppCompatActivity {
         if (resuleCode == Activity.RESULT_OK) {
             if (requestCode == INTENT_REQUEST_GET_IMAGES) {
 
-                image_uris = intent.getParcelableArrayListExtra(ImagePickerActivity.EXTRA_IMAGE_URIS);
-
-                if (image_uris != null) {
-                    showMedia();
-                }
+//                image_uris = intent.getParcelableArrayListExtra(ImagePickerActivity.EXTRA_IMAGE_URIS);
+//
+//                if (image_uris != null) {
+//                    showMedia();
+//                }
 
 
             }
@@ -109,35 +109,35 @@ public class MyImagePicker extends AppCompatActivity {
     }
 
 
-    private void showMedia() {
-        // Remove all views before
-        // adding the new ones.
-        mSelectedImagesContainer.removeAllViews();
-        if (image_uris.size() >= 1) {
-            mSelectedImagesContainer.setVisibility(View.VISIBLE);
-        }
-
-        int wdpx = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100, getResources().getDisplayMetrics());
-        int htpx = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100, getResources().getDisplayMetrics());
-
-
-        for (Uri uri : image_uris) {
-
-            View imageHolder = LayoutInflater.from(this).inflate(R.layout.image_item, null);
-            ImageView thumbnail = (ImageView) imageHolder.findViewById(R.id.media_image);
-
-            Glide.with(this)
-                    .load(uri.toString())
-                    .fitCenter()
-                    .into(thumbnail);
-
-            mSelectedImagesContainer.addView(imageHolder);
-
-            thumbnail.setLayoutParams(new FrameLayout.LayoutParams(wdpx, htpx));
-
-
-        }
-
-    }
+//    private void showMedia() {
+//        // Remove all views before
+//        // adding the new ones.
+//        mSelectedImagesContainer.removeAllViews();
+//        if (image_uris.size() >= 1) {
+//            mSelectedImagesContainer.setVisibility(View.VISIBLE);
+//        }
+//
+//        int wdpx = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100, getResources().getDisplayMetrics());
+//        int htpx = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100, getResources().getDisplayMetrics());
+//
+//
+//        for (Uri uri : image_uris) {
+//
+//            View imageHolder = LayoutInflater.from(this).inflate(R.layout.image_item, null);
+//            ImageView thumbnail = (ImageView) imageHolder.findViewById(R.id.media_image);
+//
+//            Glide.with(this)
+//                    .load(uri.toString())
+//                    .fitCenter()
+//                    .into(thumbnail);
+//
+//            mSelectedImagesContainer.addView(imageHolder);
+//
+//            thumbnail.setLayoutParams(new FrameLayout.LayoutParams(wdpx, htpx));
+//
+//
+//        }
+//
+//    }
 
 }

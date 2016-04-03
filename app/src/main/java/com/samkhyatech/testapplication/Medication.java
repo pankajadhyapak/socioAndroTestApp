@@ -33,24 +33,24 @@ public class Medication extends AppCompatActivity {
         startActivityForResult(Intent.createChooser(intent, "Select Prescription Images"), PICK_IMAGE);
     }
 
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.PrescriptionTextRadioBtn:
-                if (checked)
-                    findViewById(R.id.PrescriptionEditText).setVisibility(View.VISIBLE);
-                findViewById(R.id.PrescriptionPicBtn).setVisibility(View.GONE);
-                break;
-            case R.id.PrescriptionImageRadioBtn:
-                if (checked)
-                    findViewById(R.id.PrescriptionEditText).setVisibility(View.GONE);
-                    findViewById(R.id.PrescriptionPicBtn).setVisibility(View.VISIBLE);
-                break;
-        }
-    }
+//    public void onRadioButtonClicked(View view) {
+//        // Is the button now checked?
+//        boolean checked = ((RadioButton) view).isChecked();
+//
+//        // Check which radio button was clicked
+//        switch(view.getId()) {
+//            case R.id.PrescriptionTextRadioBtn:
+//                if (checked)
+//                    findViewById(R.id.PrescriptionEditText).setVisibility(View.VISIBLE);
+//                findViewById(R.id.PrescriptionPicBtn).setVisibility(View.GONE);
+//                break;
+//            case R.id.PrescriptionImageRadioBtn:
+//                if (checked)
+//                    findViewById(R.id.PrescriptionEditText).setVisibility(View.GONE);
+//                    findViewById(R.id.PrescriptionPicBtn).setVisibility(View.VISIBLE);
+//                break;
+//        }
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

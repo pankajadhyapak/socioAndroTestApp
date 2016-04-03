@@ -10,7 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
-import com.gun0912.tedpicker.ImagePickerActivity;
+//import com.gun0912.tedpicker.ImagePickerActivity;
 
 public class Reports extends AppCompatActivity {
 
@@ -42,8 +42,8 @@ public class Reports extends AppCompatActivity {
         switch (v.getId()){
             case R.id.bloodReports:
 
-                Intent intent  = new Intent(this, ImagePickerActivity.class);
-                startActivityForResult(intent,BLOOD_REPORTS);
+                //Intent intent  = new Intent(this, ImagePickerActivity.class);
+                //startActivityForResult(intent,BLOOD_REPORTS);
 
                 break;
             case R.id.urineReports:

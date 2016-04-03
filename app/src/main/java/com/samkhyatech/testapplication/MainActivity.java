@@ -14,8 +14,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
-
     public void onButtonClicked(View view){
 
         int id = view.getId();
@@ -33,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.Medication:
                 startActivity(new Intent(MainActivity.this, Medication.class));
                 break;
-            case R.id.Reports:
-                startActivity(new Intent(MainActivity.this, Reports.class));
-                break;
-            case R.id.ImageUploadTest:
-                startActivity(new Intent(MainActivity.this, MyImagePicker.class));
+//            case R.id.Reports:
+//                startActivity(new Intent(MainActivity.this, Reports.class));
+//                break;
+//            case R.id.ImageUploadTest:
+//                startActivity(new Intent(MainActivity.this, MyImagePicker.class));
         }
     }
 }
